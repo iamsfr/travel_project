@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- MDB -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
+    rel="stylesheet"
+  />
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        {% comment %} <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="container w-25 p-3 mt-5">
+        <div class=" row mb-4">
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="form3Example1" class="form-control" />
+              <label class="form-label" for="form3Example1">First name</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="form3Example2" class="form-control" />
+              <label class="form-label" for="form3Example2">Last name</label>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="form3Example3" class="form-control" />
+          <label class="form-label" for="form3Example3">Email address</label>
+        </div>
+      
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="form3Example4" class="form-control" />
+          <label class="form-label" for="form3Example4">Password</label>
+        </div>
+
+        <div class="form-outline mb-4">
+            <input type="password" id="form3Example4" class="form-control" />
+            <label class="form-label" for="form3Example4">Confirm Password</label>
+          </div>
+      
+        <!-- Checkbox -->
+        <div class="form-check d-flex justify-content-center mb-4">
+          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+          <label class="form-check-label" for="form2Example33">
+            Subscribe to our newsletter
+          </label>
+        </div>
+      
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+      
+        <!-- Register buttons -->
+        <div class="text-center">
+          <p>or sign up with:</p>
+          <button type="button" class="btn btn-primary btn-floating mx-1">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+      
+          <button type="button" class="btn btn-primary btn-floating mx-1">
+            <i class="fab fa-google"></i>
+          </button>
+      
+          <button type="button" class="btn btn-primary btn-floating mx-1">
+            <i class="fab fa-twitter"></i>
+          </button>
+      
+          <button type="button" class="btn btn-primary btn-floating mx-1">
+            <i class="fab fa-github"></i>
+          </button>
+        </div>
+      </form>
+    </div> {% endcomment %}
+
+
+
+
+
+
+     <form action="register" method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" name="first_name" id=""></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="last_name" id=""></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" id=""></td>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="username" id=""></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" id=""></td>
+            </tr>
+            <tr>
+                <td>Confirm Password</td>
+                <td><input type="password" name="cpassword" id=""></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Register"></td>
+            </tr>
+        </table>
+
+    </form> {% endcomment %}
+    {% for msg in messages %}
+        {{msg}}
+    {% endfor %}
+</body>
+</html>
